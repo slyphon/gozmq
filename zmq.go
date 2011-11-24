@@ -387,71 +387,71 @@ func (s *zmqSocket) SetBacklog(value int) error {
 
 /* sockopt getters */
 
-func (s *zmqSocket) GetSocketType() (uint64, error) {
+func (s *zmqSocket) SocketType() (uint64, error) {
     return s.GetSockOptUInt64(TYPE)
 }
 
-func (s *zmqSocket) GetRcvmore() (rval uint64, e error) {
+func (s *zmqSocket) Rcvmore() (rval uint64, e error) {
     return s.GetSockOptUInt64(RCVMORE)
 }
 
-func (s *zmqSocket) GetHWM() (uint64, error) {
+func (s *zmqSocket) HWM() (uint64, error) {
     return s.GetSockOptUInt64(HWM)
 }
 
-func (s *zmqSocket) GetSwap() (int64, error) {
+func (s *zmqSocket) Swap() (int64, error) {
     return s.GetSockOptInt64(SWAP)
 }
 
-func (s *zmqSocket) GetAffinity() (uint64, error) {
+func (s *zmqSocket) Affinity() (uint64, error) {
     return s.GetSockOptUInt64(AFFINITY)
 }
 
-func (s *zmqSocket) GetIdentity() (string, error) {
+func (s *zmqSocket) Identity() (string, error) {
     return s.GetSockOptString(IDENTITY)
 }
 
-func (s *zmqSocket) GetRate() (int64, error) {
+func (s *zmqSocket) Rate() (int64, error) {
     return s.GetSockOptInt64(RATE)
 }
 
-func (s *zmqSocket) GetRecoveryIvl() (int64, error) {
+func (s *zmqSocket) RecoveryIvl() (int64, error) {
     return s.GetSockOptInt64(RECOVERY_IVL)
 }
 
-func (s *zmqSocket) GetRecoveryIvlMsec() (int64, error) {
+func (s *zmqSocket) RecoveryIvlMsec() (int64, error) {
     return s.GetSockOptInt64(RECOVERY_IVL_MSEC)
 }
 
-func (s *zmqSocket) GetMcastLoop() (int64, error) {
+func (s *zmqSocket) McastLoop() (int64, error) {
     return s.GetSockOptInt64(MCAST_LOOP)
 }
 
-func (s *zmqSocket) GetSndbuf() (uint64, error) {
+func (s *zmqSocket) Sndbuf() (uint64, error) {
     return s.GetSockOptUInt64(SNDBUF)
 }
 
-func (s *zmqSocket) GetRcvbuf() (uint64, error) {
+func (s *zmqSocket) Rcvbuf() (uint64, error) {
     return s.GetSockOptUInt64(RCVBUF)
 }
 
-func (s *zmqSocket) GetLinger() (int, error) {
+func (s *zmqSocket) Linger() (int, error) {
     return s.GetSockOptInt(LINGER)
 }
 
-func (s *zmqSocket) GetReconnectIvl() (int, error) {
+func (s *zmqSocket) ReconnectIvl() (int, error) {
     return s.GetSockOptInt(RECONNECT_IVL)
 }
 
-func (s *zmqSocket) GetReconnectIvlMax() (int, error) {
+func (s *zmqSocket) ReconnectIvlMax() (int, error) {
     return s.GetSockOptInt(RECONNECT_IVL_MAX)
 }
 
-func (s *zmqSocket) GetBacklog() (int, error) {
+func (s *zmqSocket) Backlog() (int, error) {
     return s.GetSockOptInt(BACKLOG)
 }
 
-func (s *zmqSocket) GetFd() (int64, error) {
+func (s *zmqSocket) Fd() (int64, error) {
     return s.GetSockOptInt64(FD)
 }
 
