@@ -322,139 +322,138 @@ func (s *zmqSocket) GetSockOptString(option StringSocketOption) (value string, e
 /* sockopt setters */
 
 func (s *zmqSocket) SetHWM(value uint64) error {
-    return s.SetSockOptUInt64(HWM, value)
+	return s.SetSockOptUInt64(HWM, value)
 }
 
 func (s *zmqSocket) SetSwap(value int64) error {
-    return s.SetSockOptInt64(SWAP, value)
+	return s.SetSockOptInt64(SWAP, value)
 }
 
 func (s *zmqSocket) SetAffinity(value uint64) error {
-    return s.SetSockOptUInt64(AFFINITY, value)
+	return s.SetSockOptUInt64(AFFINITY, value)
 }
 
 func (s *zmqSocket) SetIdentity(value string) error {
-    return s.SetSockOptString(IDENTITY, value)
+	return s.SetSockOptString(IDENTITY, value)
 }
 
 func (s *zmqSocket) SetSubscribe(value string) error {
-    return s.SetSockOptString(SUBSCRIBE, value)
+	return s.SetSockOptString(SUBSCRIBE, value)
 }
 
 func (s *zmqSocket) SetUnsubscribe(value string) error {
-    return s.SetSockOptString(UNSUBSCRIBE, value)
+	return s.SetSockOptString(UNSUBSCRIBE, value)
 }
 
 func (s *zmqSocket) SetRate(value int64) error {
-    return s.SetSockOptInt64(RATE, value)
+	return s.SetSockOptInt64(RATE, value)
 }
 
 func (s *zmqSocket) SetRecoveryIvl(value int64) error {
-    return s.SetSockOptInt64(RECOVERY_IVL, value)
+	return s.SetSockOptInt64(RECOVERY_IVL, value)
 }
 
 func (s *zmqSocket) SetRecoveryIvlMsec(value int64) error {
-    return s.SetSockOptInt64(RECOVERY_IVL_MSEC, value)
+	return s.SetSockOptInt64(RECOVERY_IVL_MSEC, value)
 }
 
 func (s *zmqSocket) SetMcastLoop(value int64) error {
-    return s.SetSockOptInt64(MCAST_LOOP, value)
+	return s.SetSockOptInt64(MCAST_LOOP, value)
 }
 
 func (s *zmqSocket) SetSndbuf(value uint64) error {
-    return s.SetSockOptUInt64(SNDBUF, value)
+	return s.SetSockOptUInt64(SNDBUF, value)
 }
 
 func (s *zmqSocket) SetRcvbuf(value uint64) error {
-    return s.SetSockOptUInt64(RCVBUF, value)
+	return s.SetSockOptUInt64(RCVBUF, value)
 }
 
 func (s *zmqSocket) SetLinger(value int) error {
-    return s.SetSockOptInt(LINGER, value)
+	return s.SetSockOptInt(LINGER, value)
 }
 
 func (s *zmqSocket) SetReconnectIvl(value int) error {
-    return s.SetSockOptInt(RECONNECT_IVL, value)
+	return s.SetSockOptInt(RECONNECT_IVL, value)
 }
 
 func (s *zmqSocket) SetReconnectIvlMax(value int) error {
-    return s.SetSockOptInt(RECONNECT_IVL_MAX, value)
+	return s.SetSockOptInt(RECONNECT_IVL_MAX, value)
 }
 
 func (s *zmqSocket) SetBacklog(value int) error {
-    return s.SetSockOptInt(BACKLOG, value)
+	return s.SetSockOptInt(BACKLOG, value)
 }
 
 /* sockopt getters */
 
 func (s *zmqSocket) SocketType() (uint64, error) {
-    return s.GetSockOptUInt64(TYPE)
+	return s.GetSockOptUInt64(TYPE)
 }
 
 func (s *zmqSocket) Rcvmore() (rval uint64, e error) {
-    return s.GetSockOptUInt64(RCVMORE)
+	return s.GetSockOptUInt64(RCVMORE)
 }
 
 func (s *zmqSocket) HWM() (uint64, error) {
-    return s.GetSockOptUInt64(HWM)
+	return s.GetSockOptUInt64(HWM)
 }
 
 func (s *zmqSocket) Swap() (int64, error) {
-    return s.GetSockOptInt64(SWAP)
+	return s.GetSockOptInt64(SWAP)
 }
 
 func (s *zmqSocket) Affinity() (uint64, error) {
-    return s.GetSockOptUInt64(AFFINITY)
+	return s.GetSockOptUInt64(AFFINITY)
 }
 
 func (s *zmqSocket) Identity() (string, error) {
-    return s.GetSockOptString(IDENTITY)
+	return s.GetSockOptString(IDENTITY)
 }
 
 func (s *zmqSocket) Rate() (int64, error) {
-    return s.GetSockOptInt64(RATE)
+	return s.GetSockOptInt64(RATE)
 }
 
 func (s *zmqSocket) RecoveryIvl() (int64, error) {
-    return s.GetSockOptInt64(RECOVERY_IVL)
+	return s.GetSockOptInt64(RECOVERY_IVL)
 }
 
 func (s *zmqSocket) RecoveryIvlMsec() (int64, error) {
-    return s.GetSockOptInt64(RECOVERY_IVL_MSEC)
+	return s.GetSockOptInt64(RECOVERY_IVL_MSEC)
 }
 
 func (s *zmqSocket) McastLoop() (int64, error) {
-    return s.GetSockOptInt64(MCAST_LOOP)
+	return s.GetSockOptInt64(MCAST_LOOP)
 }
 
 func (s *zmqSocket) Sndbuf() (uint64, error) {
-    return s.GetSockOptUInt64(SNDBUF)
+	return s.GetSockOptUInt64(SNDBUF)
 }
 
 func (s *zmqSocket) Rcvbuf() (uint64, error) {
-    return s.GetSockOptUInt64(RCVBUF)
+	return s.GetSockOptUInt64(RCVBUF)
 }
 
 func (s *zmqSocket) Linger() (int, error) {
-    return s.GetSockOptInt(LINGER)
+	return s.GetSockOptInt(LINGER)
 }
 
 func (s *zmqSocket) ReconnectIvl() (int, error) {
-    return s.GetSockOptInt(RECONNECT_IVL)
+	return s.GetSockOptInt(RECONNECT_IVL)
 }
 
 func (s *zmqSocket) ReconnectIvlMax() (int, error) {
-    return s.GetSockOptInt(RECONNECT_IVL_MAX)
+	return s.GetSockOptInt(RECONNECT_IVL_MAX)
 }
 
 func (s *zmqSocket) Backlog() (int, error) {
-    return s.GetSockOptInt(BACKLOG)
+	return s.GetSockOptInt(BACKLOG)
 }
 
 func (s *zmqSocket) Fd() (int64, error) {
-    return s.GetSockOptInt64(FD)
+	return s.GetSockOptInt64(FD)
 }
-
 
 // Bind the socket to a listening address.
 // int zmq_bind (void *s, const char *addr);
